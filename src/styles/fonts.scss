@@ -1,0 +1,28 @@
+$font: "Montserrat", sans-serif;
+
+body {
+  font-family: $font;
+  font-size: 14px;
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  #container {
+    header {
+      #logo {
+        font-size: 2.5rem;
+      }
+    }
+    nav {
+      font-size: 1.5rem;
+    }
+    footer {
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

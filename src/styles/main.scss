@@ -1,0 +1,49 @@
+@import "colors";
+@import "fonts";
+
+$maxS: 1200px;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  #container {
+    margin: 10px auto;
+    max-width: $maxS;
+    display: flex;
+    flex-direction: column;
+    header {
+      margin: 0px;
+      padding: 15px;
+    }
+    nav {
+      margin: 0px;
+      padding: 0px;
+      ul {
+        margin: 0px;
+        padding: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        li {
+          list-style: none;
+        }
+      }
+    }
+    main {
+      margin: 0px;
+      padding: 25px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      section {
+        margin: 0px;
+        padding: 20px;
+        width: 300px;
+      }
+    }
+    footer {
+      margin: 0px;
+      padding: 15px;
+    }
+  }
+}

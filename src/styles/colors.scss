@@ -1,0 +1,25 @@
+body {
+  background-color: #e1e5ee;
+  #container {
+    header {
+      background-color: #58699d;
+      #logo {
+        color: antiquewhite;
+      }
+    }
+    nav {
+      background-color: #2a324b;
+      color: antiquewhite;
+    }
+    main {
+      background-color: #ffffff;
+      section {
+        background-color: antiquewhite;
+      }
+    }
+    footer {
+      background-color: #2a324b;
+      color: #e1e5ee;
+    }
+  }
+}

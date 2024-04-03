@@ -1,35 +1,36 @@
 body {
-  background-color: #e1e5ee;
+  background-color: #ccc5b9;
   #container {
     header {
-      background-color: #58699d;
+      background-color: #252422;
       #logo {
-        color: antiquewhite;
+        color: #eb5e28;
       }
     }
     nav {
-      background-color: #2a324b;
-      color: antiquewhite;
+      background-color: #fca311;
+      color: #000000;
       #search{
-        background-color: #2a324b;
-        color: antiquewhite;
+        background-color: #fca311;
+        color: #000000;
       }
       #search_button{
-        background-color: antiquewhite;
+        background-color: #eb5e28;
       }
     }
     main {
-      background-color: #ffffff;
-      section {
-        background-color: #ffffff;
-      }
+      background-color: none;
       article{
-        background-color: antiquewhite;
+        background-color: #ffffff;
+        button{
+          background-color: #eb5e28;
+          color: #000000;
+        }
       }
     }
     footer {
-      background-color: #2a324b;
-      color: #e1e5ee;
+      background-color: #ccc5b9;
+      color: #403d39;
     }
   }
 }

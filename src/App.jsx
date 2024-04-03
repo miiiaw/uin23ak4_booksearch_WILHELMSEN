@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./components/Home";
+import Bookcard from "./components/Bookcard";
 
 function App() {
 
@@ -29,8 +29,8 @@ function App() {
   return (
     <Layout books={books} updateBooks={updateBooks}>
       <Routes>
-        <Route path="/" element={<Home books={books} bookSearch={bookSearch}/>}/>
-        <Route path="home" element={<Home books={books} bookSearch={bookSearch}/>}/>
+        <Route path="/" element={<Bookcard books={books} bookSearch={bookSearch}/>}/>
+        <Route path="home" element={<Bookcard books={books} bookSearch={bookSearch}/>}/>
       </Routes>
     </Layout>
   );

@@ -1,4 +1,4 @@
-export default function Main({children}) {
+export default function Searchresults({children}) {
   return (
     <>
       <main>

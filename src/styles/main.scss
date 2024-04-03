@@ -17,18 +17,27 @@ body {
     }
     nav {
       margin: 0px;
-      padding: 0px;
-      ul {
+      padding: 15px;
+      form{
         margin: 0px;
-        padding: 8px;
+        padding: 5px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        li {
-          list-style: none;
+        #search{
+          width: 180px;
+          height: 30px;
+          border: 2px solid #faebd7;
+          border-radius: 2%;
         }
-      }
-    }
+        #search_button{
+          width: 180px;
+          height: 30px;
+          border: 2px solid #faebd7;
+          border-radius: 2%;
+          cursor: pointer;
+        }
+    }}
     main {
       margin: 0px;
       padding: 25px;
@@ -39,6 +48,19 @@ body {
         margin: 0px;
         padding: 20px;
         width: 300px;
+      }
+      article {
+        margin: 20px;
+        padding: 5px;
+        width: 200px;
+        button{
+          margin: 0px;
+          padding: 5px;
+          width: 150px;
+          border: 1px solid #000;
+          border-radius: 6%;
+          cursor: pointer;
+        }
       }
     }
     footer {

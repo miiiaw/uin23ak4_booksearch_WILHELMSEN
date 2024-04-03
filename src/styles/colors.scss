@@ -10,10 +10,20 @@ body {
     nav {
       background-color: #2a324b;
       color: antiquewhite;
+      #search{
+        background-color: #2a324b;
+        color: antiquewhite;
+      }
+      #search_button{
+        background-color: antiquewhite;
+      }
     }
     main {
       background-color: #ffffff;
       section {
+        background-color: #ffffff;
+      }
+      article{
         background-color: antiquewhite;
       }
     }

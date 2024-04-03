@@ -1,16 +1,19 @@
 import { useState } from "react"
 
-export default function Navigation( {setQuery}) {
+export default function Navigation({books, setBooks}) {
   const [search, setSearch] = useState ("")
   
-  const handleSubmit = (submitEvent) => {
-    submitEvent.preventDefault()
-    setQuery(search)
-  } 
-
   const handleChange = (changeEvent) => {
     setSearch(changeEvent.target.value)
   }
+
+  const handleSubmit = (submitEvent) => {
+    submitEvent.preventDefault()
+    const filteredBooks = books.filter(book => book.title.includes(search))
+    setBooks(filteredBooks)
+  } 
+
+
 
   return (
     <nav>

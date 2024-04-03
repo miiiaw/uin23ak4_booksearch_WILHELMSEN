@@ -9,27 +9,23 @@ function App() {
 
   const [books, setBooks] = useState([])
 
-  const [query, setQuery] = useState("")
-
   const getData = async() => {
     try{
-      const response = await fetch(`https://openlibrary.org/search.json?author=${query}`)
+      const response = await fetch(`https://openlibrary.org/search.json?author=ian+fleming`)
       const data = await response.json()
       setBooks(data.docs)
     } catch (error) {
-      console.error("Ups, something went wrong!")
+      console.error("Upsie, something went wrong!")
     }
   }
 
   useEffect(() => {
-    if (query) { 
       getData();
-    }
-  }, [query]);
+  }, []);
 
 
   return (
-    <Layout setQuery={setQuery}>
+    <Layout books={books} setBooks={setBooks}>
       <Routes>
         <Route path="/" element={<Home books={books}/>}/>
         <Route path="home" element={<Home books={books}/>}/>

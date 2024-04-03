@@ -1,10 +1,11 @@
 
-export default function Home({books}){
+export default function Home({books, bookSearch}){
     console.log("Hjem", books)
     return (
         <>
             <h1>James Bond books</h1>
-            {books?.map(item => 
+            {
+            (bookSearch.length > 0 ? bookSearch : books).map(item => 
                 <article key={item.cover_edition_key}>
                     <h3>{item.title}</h3>
                     <h4>{item.first_publish_year}</h4>

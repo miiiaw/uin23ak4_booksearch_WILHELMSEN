@@ -9,6 +9,8 @@ function App() {
 
   const [books, setBooks] = useState([])
 
+  const [bookSearch, updateBooks] = useState ([])
+
   const getData = async() => {
     try{
       const response = await fetch(`https://openlibrary.org/search.json?author=ian+fleming`)
@@ -25,10 +27,10 @@ function App() {
 
 
   return (
-    <Layout books={books} setBooks={setBooks}>
+    <Layout books={books} setBooks={setBooks} bookSearch={bookSearch} updateBooks={updateBooks}>
       <Routes>
-        <Route path="/" element={<Home books={books}/>}/>
-        <Route path="home" element={<Home books={books}/>}/>
+        <Route path="/" element={<Home books={books} bookSearch={bookSearch}/>}/>
+        <Route path="home" element={<Home books={books} bookSearch={bookSearch}/>}/>
       </Routes>
     </Layout>
   );

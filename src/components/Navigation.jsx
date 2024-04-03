@@ -9,9 +9,10 @@ export default function Navigation({books, updateBooks}) {
 
   const handleSubmit = (submitEvent) => {
     submitEvent.preventDefault()
+    if (search.length > 3) {
     const filteredBooks = books.filter(book => book.title.toLowerCase().includes(search.toLowerCase()))
     updateBooks(filteredBooks)
-  } 
+}} 
 
 
 
@@ -20,7 +21,7 @@ export default function Navigation({books, updateBooks}) {
       <form onSubmit={handleSubmit}>
         <label htmlFor="search">Search for a book...</label>
         <input type="text" id="search" placeholder="Type your search here, please" onChange={handleChange}></input>
-        <input type="submit" id="search_button" value="Search"></input>
+        <input type="submit" id="search_button" value="Search" disabled={search.length < 3}></input>
       </form>
     </nav>
   );

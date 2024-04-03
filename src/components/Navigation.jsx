@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Navigation({books, setBooks, bookSearch, updateBooks}) {
+export default function Navigation({books, updateBooks}) {
   const [search, setSearch] = useState ("")
   
   const handleChange = (changeEvent) => {
@@ -9,7 +9,7 @@ export default function Navigation({books, setBooks, bookSearch, updateBooks}) {
 
   const handleSubmit = (submitEvent) => {
     submitEvent.preventDefault()
-    const filteredBooks = books.filter(book => book.title.includes(search))
+    const filteredBooks = books.filter(book => book.title.toLowerCase().includes(search.toLowerCase()))
     updateBooks(filteredBooks)
   } 
 

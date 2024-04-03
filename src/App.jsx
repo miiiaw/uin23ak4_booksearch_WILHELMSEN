@@ -27,7 +27,7 @@ function App() {
 
 
   return (
-    <Layout books={books} setBooks={setBooks} bookSearch={bookSearch} updateBooks={updateBooks}>
+    <Layout books={books} updateBooks={updateBooks}>
       <Routes>
         <Route path="/" element={<Home books={books} bookSearch={bookSearch}/>}/>
         <Route path="home" element={<Home books={books} bookSearch={bookSearch}/>}/>

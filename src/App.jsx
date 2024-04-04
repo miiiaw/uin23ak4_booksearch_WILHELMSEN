@@ -29,8 +29,7 @@ function App() {
   return (
     <Layout books={books} updateBooks={updateBooks}>
       <Routes>
-        <Route path="/" element={<Bookcard books={books} bookSearch={bookSearch}/>}/>
-        <Route path="home" element={<Bookcard books={books} bookSearch={bookSearch}/>}/>
+        <Route index element={<Bookcard books={books} bookSearch={bookSearch}/>}/>
       </Routes>
     </Layout>
   );

@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <p>The foooooter</p>
+        <p>Search books with James Bond</p>
       </footer>
     </>
   );

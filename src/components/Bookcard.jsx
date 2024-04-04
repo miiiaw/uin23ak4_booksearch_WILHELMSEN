@@ -1,4 +1,7 @@
 
+// Hjelp fra ChatGPT med hvor jeg skulle kjøre if-testene med ternary operators. 
+// Hjelp/tips fra ChatGPT med hvor jeg skulle finne bildene hen, siden dette ikke var nevnt i oppgaveteksten. 
+
 export default function Bookcard({books, bookSearch}){
     return (
         <>

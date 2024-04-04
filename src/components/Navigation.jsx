@@ -1,3 +1,5 @@
+// Hjelp fra ChatGPT med aa huske hvordan disable knapp
+
 import { useState } from "react"
 
 export default function Navigation({books, updateBooks}) {
@@ -20,7 +22,7 @@ export default function Navigation({books, updateBooks}) {
     <nav>
       <form onSubmit={handleSubmit}>
         <label htmlFor="search">Search for a book...</label>
-        <input type="text" id="search" placeholder="Type your search here, please" onChange={handleChange}></input>
+        <input type="text" id="search" placeholder="Type your search here" onChange={handleChange}></input>
         <input type="submit" id="search_button" value="Search" disabled={search.length < 3}></input>
       </form>
     </nav>

@@ -1,5 +1,5 @@
 
-// Hjelp fra ChatGPT med hvor jeg skulle kjøre if-testene med ternary operators. 
+// Hjelp fra ChatGPT med hvor jeg skulle kjoere if-testene med ternary operators. Samt if-test ved bilder og link for aa unngaa krasj.
 // Hjelp/tips fra ChatGPT med hvor jeg skulle finne bildene hen, siden dette ikke var nevnt i oppgaveteksten. 
 
 export default function Bookcard({books, bookSearch}){
@@ -13,7 +13,7 @@ export default function Bookcard({books, bookSearch}){
                     <p>Published: {item.first_publish_year}</p>
                     <p>Author: {item.author_name}</p>
                     <p>Rating: {item.ratings_average}</p>
-                    <a href={`https://www.amazon.com/s?k=${item.id_amazon}`} target="_blank">
+                    <a href={item.id_amazon && item.id_amazon.length > 0 ? `https://www.amazon.com/s?k=${item.id_amazon[0]}` : `https://www.amazon.com`} target="_blank">
                         <button>Search Amazon.com</button>
                     </a>
                 </article>)}

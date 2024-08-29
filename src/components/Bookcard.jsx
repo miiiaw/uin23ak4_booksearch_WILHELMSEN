@@ -2,11 +2,11 @@
 // Hjelp fra ChatGPT med hvor jeg skulle kjoere if-testene med ternary operators. Samt if-test ved bilder og link for aa unngaa krasj.
 // Hjelp/tips fra ChatGPT med hvor jeg skulle finne bildene hen, siden dette ikke var nevnt i oppgaveteksten. 
 
-export default function Bookcard({books, bookSearch}){
+export default function Bookcard({books}){
     return (
         <>
             {
-            (bookSearch.length > 0 ? bookSearch : books).map(item => 
+            books.map(item => 
                 <article key={item.cover_edition_key}>
                     <img src={item.isbn && item.isbn.length > 0 ? `https://covers.openlibrary.org/b/isbn/${item.isbn[0]}.jpg` : 'defaultImageURL'} />
                     <h3>{item.title}</h3>

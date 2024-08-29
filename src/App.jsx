@@ -8,12 +8,14 @@ import Bookcard from "./components/Bookcard";
 function App() {
 
   const [books, setBooks] = useState([])
+  const [bookSearch, updateBooks] = useState ("")
 
-  const [bookSearch, updateBooks] = useState ([])
 
   const getData = async() => {
+    let URL = `${bookSearch}` ? `https://openlibrary.org/search.json?author=ian+fleming&title=${bookSearch}` : `https://openlibrary.org/search.json?author=ian+fleming`  
+    
     try{
-      const response = await fetch(`https://openlibrary.org/search.json?author=ian+fleming`)
+      const response = await fetch(URL)
       const data = await response.json()
       setBooks(data.docs)
     } catch (error) {
@@ -23,11 +25,11 @@ function App() {
 
   useEffect(() => {
       getData();
-  }, []);
+  }, [bookSearch]);
 
 
   return (
-    <Layout books={books} updateBooks={updateBooks}>
+    <Layout bookSearch={bookSearch} updateBooks={updateBooks}>
       <Routes>
         <Route index element={<Bookcard books={books} bookSearch={bookSearch}/>}/>
       </Routes>
@@ -36,3 +38,6 @@ function App() {
 }
 
 export default App;
+
+
+

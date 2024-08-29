@@ -3,11 +3,11 @@ import Navigation from "./Navigation";
 import Searchresults from "./Searchresults"
 import Footer from "./Footer";
 
-export default function Layout( {children, books, updateBooks} ) {
+export default function Layout( {children, bookSearch, updateBooks} ) {
     return (
         <div id="container">
         <Header />
-        <Navigation books={books} updateBooks={updateBooks}/>
+        <Navigation bookSearch={bookSearch} updateBooks={updateBooks}/>
         <Searchresults>{children}</Searchresults>
         <Footer />
       </div>
